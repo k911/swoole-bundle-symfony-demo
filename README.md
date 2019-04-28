@@ -1,0 +1,28 @@
+# Swoole Bundle - Symfony Demo
+
+Minimal hello world [Symfony](https://symfony.com/) application with [`k911/swoole-bundle`](https://github.com/k911/swoole-bundle) and [Docker](https://docs.docker.com/get-started/).
+
+## Quick start - docker
+
+*Requirements:*
+
+- [composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-macos)
+- [Docker](https://docs.docker.com/install/)
+- [docker-compose](https://docs.docker.com/compose/install/)
+
+```bash
+# first terminal
+docker-compose build
+docker-compose up -d
+docker-compose logs -f app
+
+# application will be available under URL http://localhost:9501
+```
+
+## Quick start - local
+
+*Requirements:*
+
+- PHP v7.2 and up
+- [composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-macos)
+- [Swoole PHP Extension v4.3.0 and up](https://github.com/swoole/swoole-src)

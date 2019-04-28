@@ -1,0 +1,17 @@
+parameters:
+    env(HOST): 0.0.0.0
+    env(PORT): 9501
+
+swoole:
+    http_server:
+        host: "%env(HOST)%"
+        port: "%env(PORT)%"
+        running_mode: process
+        trusted_hosts:
+            - "%env(TRUSTED_HOSTS)%"
+        trusted_proxies:
+            - "%env(TRUSTED_PROXIES)%"
+        hmr: auto
+        static:
+             public_dir: "%kernel.project_dir%/public"
+             strategy: default
