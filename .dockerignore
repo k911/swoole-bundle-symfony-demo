@@ -1,0 +1,11 @@
+*
+!/bin
+!/config
+!/public
+public/index.php
+!/src
+!/templates
+!composer.json
+!composer.lock
+!symfony.lock
+!.env*

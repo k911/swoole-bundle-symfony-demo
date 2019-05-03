@@ -1,6 +1,9 @@
 parameters:
     env(HOST): 0.0.0.0
     env(PORT): 9501
+    env(API_HOST): 0.0.0.0
+    env(API_PORT): 9200
+    env(SWOOLE_LOG_STREAM_PATH): "%kernel.logs_dir%/swoole_%kernel.environment%.log"
 
 swoole:
     http_server:
@@ -12,6 +15,12 @@ swoole:
         trusted_proxies:
             - "%env(TRUSTED_PROXIES)%"
         hmr: auto
+        api:
+            enabled: true
+            host: "%env(API_HOST)%"
+            port: "%env(API_PORT)%"
         static:
              public_dir: "%kernel.project_dir%/public"
              strategy: default
+        settings:
+            log_file: '%env(resolve:SWOOLE_LOG_STREAM_PATH)%'

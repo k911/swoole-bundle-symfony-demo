@@ -11,12 +11,8 @@ Minimal hello world [Symfony](https://symfony.com/) application with [`k911/swoo
 - [docker-compose](https://docs.docker.com/compose/install/)
 
 ```bash
-# first terminal
 docker-compose build
-docker-compose up -d
-docker-compose logs -f app
-
-# application will be available under URL http://localhost:9501
+docker-compose up
 ```
 
 ## Quick start - local
@@ -26,3 +22,8 @@ docker-compose logs -f app
 - PHP v7.2 and up
 - [composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-macos)
 - [Swoole PHP Extension v4.3.0 and up](https://github.com/swoole/swoole-src)
+
+```bash
+composer install
+./bin/console swoole:server:run
+```

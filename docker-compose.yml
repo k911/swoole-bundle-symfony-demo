@@ -1,0 +1,21 @@
+version: "3.6"
+
+services:
+  app:
+    image: "${REGISTRY:-docker.io}/${NAMESPACE:-k911}/${IMAGE_NAME:-swoole-bundle-demo}:${IMAGE_TAG:-local}"
+    build:
+      context: .
+      target: App
+    env_file: .env
+    environment:
+      APP_ENV: dev
+      HOST: 0.0.0.0
+      PORT: 9501
+      MONOLOG_MAIN_STREAM_PATH: php://stdout
+      MONOLOG_DEPRECATIONS_STREAM_PATH: php://sterr
+      SWOOLE_LOG_STREAM_PATH: /proc/self/fd/1
+      API_HOST: 0.0.0.0
+      API_PORT: 9200
+    ports:
+      - 9501:9501
+      - 9200:9200
