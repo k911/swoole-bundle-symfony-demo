@@ -24,3 +24,4 @@ swoole:
              strategy: default
         settings:
             log_file: '%env(resolve:SWOOLE_LOG_STREAM_PATH)%'
+            task_worker_count: auto

@@ -22,19 +22,24 @@
         "php": "^7.1.3",
         "ext-ctype": "*",
         "ext-iconv": "*",
-        "k911/swoole-bundle": "^0.5.2",
+        "k911/swoole-bundle": "^0.6.0",
         "sensio/framework-extra-bundle": "^5.3",
-        "symfony/console": "4.2.*",
-        "symfony/dotenv": "4.2.*",
+        "symfony/console": "4.3.*",
+        "symfony/dotenv": "4.3.*",
         "symfony/flex": "^1.1",
-        "symfony/framework-bundle": "4.2.*",
+        "symfony/framework-bundle": "4.3.*",
+        "symfony/messenger": "4.3.*",
         "symfony/monolog-bundle": "^3.3",
-        "symfony/twig-bundle": "4.2.*",
-        "symfony/yaml": "4.2.*"
+        "symfony/twig-bundle": "4.3.*",
+        "symfony/yaml": "4.3.*"
     },
     "config": {
         "preferred-install": {
             "*": "dist"
+        },
+        "platform": {
+            "php": "7.3.8",
+            "ext-swoole": "4.3.6"
         },
         "sort-packages": true
     },
@@ -74,7 +79,7 @@
     "extra": {
         "symfony": {
             "allow-contrib": false,
-            "require": "4.2.*"
+            "require": "4.3.*"
         }
     }
 }

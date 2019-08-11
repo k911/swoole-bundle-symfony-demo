@@ -27,3 +27,35 @@ docker-compose up
 composer install
 ./bin/console swoole:server:run
 ```
+
+## Links / usage
+
+- [Lucky number generator](http://localhost:9501)
+
+    ```sh
+    curl http://localhost:9501
+    ```
+
+- [Lucky number generator with output to CLI (implemented using Symfony Messenger)](http://localhost:9501/messenger)
+
+    ```sh
+    curl http://localhost:9501/messenger
+    ```
+- [Server API Access](localhost:9200/api/server)
+
+    ```sh
+    # Gets server info
+    curl http://localhost:9200/api/server
+    
+    # Reload server
+    curl -X PATCH http://localhost:9200/api/server
+    
+    # Shutdown server
+    curl -X DELETE http://localhost:9200/api/server
+    ```
+    
+- Get server status and metrics
+
+    ```sh
+    bin/console swoole:server:status
+    ```

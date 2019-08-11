@@ -1,0 +1,6 @@
+framework:
+    messenger:
+        transports:
+            swoole: swoole://task
+        routing:
+            '*': swoole

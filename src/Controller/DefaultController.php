@@ -14,12 +14,12 @@ final class DefaultController
      * @return Response
      * @throws \Exception
      */
-    public function index(): Response
+    public function luckyNumber(): Response
     {
-        $number = \random_int(0, 100);
+        $luckyNumber = \random_int(0, 100);
 
         return new Response(
-            '<html><body><h1>Hello world!</h1><h2>Lucky number: ' . $number . '</h2></body></html>'
+            '<html><body><h1>Hello world!</h1><h2>Lucky number: ' . $luckyNumber . '</h2></body></html>'
         );
     }
 
