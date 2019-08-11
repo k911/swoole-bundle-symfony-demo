@@ -1,11 +1,11 @@
-ARG PHP_TAG="7.3-cli-alpine3.9"
+ARG PHP_TAG="7.3-cli-alpine3.10"
 
 FROM php:$PHP_TAG as ext-builder
 RUN docker-php-source extract && \
     apk add --no-cache --virtual .phpize-deps $PHPIZE_DEPS
 
 FROM ext-builder as ext-swoole
-ARG SWOOLE_VERSION="4.3.1"
+ARG SWOOLE_VERSION="4.3.6"
 RUN pecl install swoole-${SWOOLE_VERSION} && \
     docker-php-ext-enable swoole
 
@@ -15,7 +15,7 @@ RUN composer global require "hirak/prestissimo:^0.3" --prefer-dist --no-progress
 COPY composer.json composer.lock symfony.lock ./
 RUN composer validate
 ARG COMPOSER_ARGS="install"
-RUN composer ${COMPOSER_ARGS} --prefer-dist --ignore-platform-reqs --no-progress --no-suggest --no-scripts --no-autoloader --ansi
+RUN composer ${COMPOSER_ARGS} --prefer-dist --no-progress --no-suggest --no-scripts --no-autoloader --ansi
 COPY . ./
 RUN composer dump-autoload --classmap-authoritative --ansi
 
