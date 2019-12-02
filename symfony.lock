@@ -14,29 +14,17 @@
             "config/routes/annotations.yaml"
         ]
     },
-    "doctrine/cache": {
-        "version": "v1.8.0"
-    },
-    "doctrine/collections": {
-        "version": "v1.6.1"
-    },
-    "doctrine/event-manager": {
-        "version": "v1.0.0"
-    },
     "doctrine/lexer": {
         "version": "v1.0.1"
-    },
-    "doctrine/persistence": {
-        "version": "1.1.1"
-    },
-    "doctrine/reflection": {
-        "version": "v1.0.0"
     },
     "k911/swoole-bundle": {
         "version": "v0.5.0"
     },
     "monolog/monolog": {
         "version": "1.24.0"
+    },
+    "php": {
+        "version": "7.4"
     },
     "psr/cache": {
         "version": "1.0.1"
@@ -84,9 +72,6 @@
             "config/bootstrap.php"
         ]
     },
-    "symfony/contracts": {
-        "version": "v1.0.2"
-    },
     "symfony/debug": {
         "version": "v4.2.7"
     },
@@ -95,6 +80,9 @@
     },
     "symfony/dotenv": {
         "version": "v4.2.7"
+    },
+    "symfony/error-handler": {
+        "version": "v4.4.1"
     },
     "symfony/event-dispatcher": {
         "version": "v4.2.7"
@@ -229,6 +217,9 @@
             "config/routes/dev/twig.yaml",
             "templates/base.html.twig"
         ]
+    },
+    "symfony/var-dumper": {
+        "version": "v4.4.1"
     },
     "symfony/var-exporter": {
         "version": "v4.2.7"

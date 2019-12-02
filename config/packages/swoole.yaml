@@ -1,8 +1,8 @@
 parameters:
     env(HOST): 0.0.0.0
-    env(PORT): 9501
+    env(PORT): '9501'
     env(API_HOST): 0.0.0.0
-    env(API_PORT): 9200
+    env(API_PORT): '9200'
     env(SWOOLE_LOG_STREAM_PATH): "%kernel.logs_dir%/swoole_%kernel.environment%.log"
 
 swoole:
