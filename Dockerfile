@@ -1,5 +1,5 @@
-ARG PHP_TAG="7.3-cli-alpine3.10"
-ARG COMPOSER_TAG="1.9.1"
+ARG PHP_TAG="7.4-cli-alpine3.11"
+ARG COMPOSER_TAG="1.10.1"
 
 FROM php:${PHP_TAG} as php-base
 
@@ -9,7 +9,7 @@ RUN docker-php-source extract && \
 
 FROM ext-builder as ext-swoole
 RUN apk add --no-cache git
-ARG SWOOLE_VERSION="4.4.12"
+ARG SWOOLE_VERSION="4.4.17"
 RUN git clone https://github.com/swoole/swoole-src.git --branch "v$SWOOLE_VERSION" --depth 1 && \
     cd swoole-src && \
     phpize && \
@@ -29,7 +29,7 @@ RUN addgroup -g 1000 -S runner && \
     chown app:runner /usr/src/app
 RUN apk add --no-cache libstdc++ icu
 # php -i | grep 'PHP API' | sed -e 's/PHP API => //'
-ARG PHP_API_VERSION="20180731"
+ARG PHP_API_VERSION="20190902"
 COPY --from=ext-intl /usr/local/lib/php/extensions/no-debug-non-zts-${PHP_API_VERSION}/intl.so /usr/local/lib/php/extensions/no-debug-non-zts-${PHP_API_VERSION}/intl.so
 COPY --from=ext-intl /usr/local/etc/php/conf.d/docker-php-ext-intl.ini /usr/local/etc/php/conf.d/docker-php-ext-intl.ini
 COPY --from=ext-swoole /usr/local/lib/php/extensions/no-debug-non-zts-${PHP_API_VERSION}/swoole.so /usr/local/lib/php/extensions/no-debug-non-zts-${PHP_API_VERSION}/swoole.so

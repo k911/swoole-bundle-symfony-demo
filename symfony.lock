@@ -32,6 +32,9 @@
     "psr/container": {
         "version": "1.0.0"
     },
+    "psr/event-dispatcher": {
+        "version": "1.0.0"
+    },
     "psr/log": {
         "version": "1.1.0"
     },
@@ -71,9 +74,6 @@
             "bin/console",
             "config/bootstrap.php"
         ]
-    },
-    "symfony/debug": {
-        "version": "v4.2.7"
     },
     "symfony/dependency-injection": {
         "version": "v4.2.7"
@@ -199,24 +199,27 @@
         "version": "v1.1.6"
     },
     "symfony/translation-contracts": {
-        "version": "v1.1.6"
+        "version": "v2.0.1"
     },
     "symfony/twig-bridge": {
-        "version": "v4.2.8"
+        "version": "v5.0.7"
     },
     "symfony/twig-bundle": {
-        "version": "3.3",
+        "version": "5.0",
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "master",
-            "version": "3.3",
-            "ref": "369b5b29dc52b2c190002825ae7ec24ab6f962dd"
+            "version": "5.0",
+            "ref": "fab9149bbaa4d5eca054ed93f9e1b66cc500895d"
         },
         "files": [
+            "config/packages/test/twig.yaml",
             "config/packages/twig.yaml",
-            "config/routes/dev/twig.yaml",
             "templates/base.html.twig"
         ]
+    },
+    "symfony/twig-pack": {
+        "version": "v1.0.0"
     },
     "symfony/var-dumper": {
         "version": "v4.4.1"
@@ -227,7 +230,10 @@
     "symfony/yaml": {
         "version": "v4.2.7"
     },
+    "twig/extra-bundle": {
+        "version": "v3.0.3"
+    },
     "twig/twig": {
-        "version": "v2.9.0"
+        "version": "v3.0.3"
     }
 }
