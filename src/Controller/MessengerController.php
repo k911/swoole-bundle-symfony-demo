@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Controller;
@@ -10,11 +11,9 @@ use Symfony\Component\Routing\Annotation\Route;
 
 final class MessengerController
 {
-
     /**
      * @Route(path="/messenger",methods={"GET"})
-     * @param MessageBusInterface $bus
-     * @return Response
+     *
      * @throws \Exception
      */
     public function luckyNumberCli(MessageBusInterface $bus): Response
@@ -24,8 +23,7 @@ final class MessengerController
         $bus->dispatch(new LuckyNumber($luckyNumber));
 
         return new Response(
-            '<html><body><h1>Hello world!</h1><h2>Lucky number sent to your console: ' . $luckyNumber . '</h2><i>Go check it!</i></body></html>'
+            '<html><body><h1>Hello world!</h1><h2>Lucky number sent to your console: '.$luckyNumber.'</h2><i>Go check it!</i></body></html>'
         );
     }
-
 }

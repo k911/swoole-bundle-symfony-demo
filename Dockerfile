@@ -1,5 +1,5 @@
-ARG PHP_TAG="7.4-cli-alpine3.11"
-ARG COMPOSER_TAG="1.10.1"
+ARG PHP_TAG="7.4-cli-alpine3.12"
+ARG COMPOSER_TAG="1.10.8"
 
 FROM php:${PHP_TAG} as php-base
 
@@ -9,7 +9,7 @@ RUN docker-php-source extract && \
 
 FROM ext-builder as ext-swoole
 RUN apk add --no-cache git
-ARG SWOOLE_VERSION="4.4.17"
+ARG SWOOLE_VERSION="4.5.2"
 RUN git clone https://github.com/swoole/swoole-src.git --branch "v$SWOOLE_VERSION" --depth 1 && \
     cd swoole-src && \
     phpize && \
@@ -44,7 +44,7 @@ RUN composer global require "hirak/prestissimo:^0.3" --prefer-dist --no-progress
 COPY composer.json composer.lock symfony.lock ./
 RUN composer validate
 ARG COMPOSER_ARGS="install"
-RUN composer ${COMPOSER_ARGS} --prefer-dist --no-progress --no-suggest --no-scripts --no-autoloader --ansi
+RUN composer ${COMPOSER_ARGS} --no-progress --no-suggest --no-scripts --no-autoloader --no-dev --ansi
 COPY . ./
 RUN composer dump-autoload --classmap-authoritative --ansi
 

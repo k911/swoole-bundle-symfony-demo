@@ -2,6 +2,12 @@
     "beberlei/assert": {
         "version": "v3.2.0"
     },
+    "composer/semver": {
+        "version": "1.5.1"
+    },
+    "composer/xdebug-handler": {
+        "version": "1.4.2"
+    },
     "doctrine/annotations": {
         "version": "1.0",
         "recipe": {
@@ -17,6 +23,18 @@
     "doctrine/lexer": {
         "version": "v1.0.1"
     },
+    "friendsofphp/php-cs-fixer": {
+        "version": "2.2",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "2.2",
+            "ref": "cc05ab6abf6894bddb9bbd6a252459010ebe040b"
+        },
+        "files": [
+            ".php_cs.dist"
+        ]
+    },
     "k911/swoole-bundle": {
         "version": "v0.5.0"
     },
@@ -25,6 +43,12 @@
     },
     "php": {
         "version": "7.4"
+    },
+    "php-cs-fixer/diff": {
+        "version": "v1.3.0"
+    },
+    "phpstan/phpstan": {
+        "version": "0.12.32"
     },
     "psr/cache": {
         "version": "1.0.1"
@@ -53,6 +77,9 @@
             "config/packages/sensio_framework_extra.yaml"
         ]
     },
+    "symfony/amqp-messenger": {
+        "version": "v5.1.2"
+    },
     "symfony/cache": {
         "version": "v4.2.7"
     },
@@ -77,6 +104,12 @@
     },
     "symfony/dependency-injection": {
         "version": "v4.2.7"
+    },
+    "symfony/deprecation-contracts": {
+        "version": "v2.1.3"
+    },
+    "symfony/doctrine-messenger": {
+        "version": "v5.1.2"
     },
     "symfony/dotenv": {
         "version": "v4.2.7"
@@ -145,9 +178,6 @@
             "config/packages/messenger.yaml"
         ]
     },
-    "symfony/mime": {
-        "version": "v4.3.4"
-    },
     "symfony/monolog-bridge": {
         "version": "v4.2.8"
     },
@@ -165,20 +195,32 @@
             "config/packages/test/monolog.yaml"
         ]
     },
-    "symfony/polyfill-intl-idn": {
-        "version": "v1.12.0"
+    "symfony/options-resolver": {
+        "version": "v5.1.2"
+    },
+    "symfony/polyfill-intl-grapheme": {
+        "version": "v1.18.0"
+    },
+    "symfony/polyfill-intl-normalizer": {
+        "version": "v1.18.0"
     },
     "symfony/polyfill-mbstring": {
         "version": "v1.11.0"
     },
     "symfony/polyfill-php72": {
-        "version": "v1.12.0"
+        "version": "v1.18.0"
     },
     "symfony/polyfill-php73": {
         "version": "v1.12.0"
     },
+    "symfony/polyfill-php80": {
+        "version": "v1.18.0"
+    },
     "symfony/process": {
         "version": "v4.2.7"
+    },
+    "symfony/redis-messenger": {
+        "version": "v5.1.2"
     },
     "symfony/routing": {
         "version": "4.2",
@@ -197,6 +239,12 @@
     },
     "symfony/service-contracts": {
         "version": "v1.1.6"
+    },
+    "symfony/stopwatch": {
+        "version": "v5.1.2"
+    },
+    "symfony/string": {
+        "version": "v5.1.2"
     },
     "symfony/translation-contracts": {
         "version": "v2.0.1"

@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Message;
@@ -14,12 +15,11 @@ final class LuckyNumber
 
     public function __toString(): string
     {
-        return (string)$this->luckyNumber();
+        return (string) $this->luckyNumber();
     }
 
     private function luckyNumber(): int
     {
         return $this->luckyNumber;
     }
-
 }

@@ -1,0 +1,7 @@
+parameters:
+    inferPrivatePropertyTypeFromConstructor: true
+    checkMissingIterableValueType: false
+    excludes_analyse:
+        # Put false positives here
+    ignoreErrors:
+        # Put false positives here

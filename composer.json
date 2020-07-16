@@ -21,16 +21,16 @@
     "require": {
         "php": "^7.4",
         "ext-ctype": "*",
-        "k911/swoole-bundle": "^0.7.6",
+        "k911/swoole-bundle": "^0.8.1",
         "sensio/framework-extra-bundle": "^5.5",
-        "symfony/console": "^5.0.7",
-        "symfony/dotenv": "^5.0.7",
+        "symfony/console": "^5.1.2",
+        "symfony/dotenv": "^5.1.2",
         "symfony/flex": "^1.6",
-        "symfony/framework-bundle": "^5.0.7",
-        "symfony/messenger": "^5.0.7",
+        "symfony/framework-bundle": "^5.1.2",
+        "symfony/messenger": "^5.1.2",
         "symfony/monolog-bundle": "^3.5",
         "symfony/twig-pack": "^1.0",
-        "symfony/yaml": "^5.0.7"
+        "symfony/yaml": "^5.1.2"
     },
     "config": {
         "preferred-install": {
@@ -66,7 +66,21 @@
         ],
         "post-update-cmd": [
             "@auto-scripts"
-        ]
+        ],
+        "static-analyse-src": [
+            "phpstan analyze src -l 7 -c phpstan.neon.dist --ansi --memory-limit=512M"
+        ],
+        "cs-analyse": [
+            "php-cs-fixer fix -v --dry-run --diff --stop-on-violation --ansi"
+        ],
+        "analyse": [
+            "@static-analyse-src",
+            "@cs-analyse"
+        ],
+        "test": [
+            "@analyse"
+        ],
+        "fix": "php-cs-fixer fix -v --ansi"
     },
     "conflict": {
         "symfony/symfony": "*"
@@ -75,5 +89,9 @@
         "symfony": {
             "allow-contrib": false
         }
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.16",
+        "phpstan/phpstan": "^0.12.32"
     }
 }

@@ -19,9 +19,9 @@ docker-compose up
 
 *Requirements:*
 
-- PHP v7.2 and up
+- PHP v7.4 and up
 - [composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-macos)
-- [Swoole PHP Extension v4.3.0 and up](https://github.com/swoole/swoole-src)
+- [Swoole PHP Extension v4.4.7 and up](https://github.com/swoole/swoole-src)
 
 ```bash
 composer install
