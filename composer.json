@@ -77,7 +77,7 @@
             "php-cs-fixer fix -v --dry-run --diff --stop-on-violation --ansi"
         ],
         "psalm-analyse": [
-            "psalm --diff"
+            "psalm"
         ],
         "analyse": [
             "@static-analyse-src",
@@ -94,13 +94,13 @@
         "fix-rector": [
             "rector process --ansi"
         ],
-        "fix-psalm": [
-            "psalm"
+        "fix-psalter": [
+            "psalm --alter --issues=all"
         ],
         "fix" : [
             "@fix-cs-fixer",
             "@fix-rector",
-            "@fix-psalm"
+            "@fix-psalter"
         ]
     },
     "conflict": {
