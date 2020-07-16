@@ -1,13 +1,20 @@
 <?php
 
 declare(strict_types=1);
+use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
+use K911\Swoole\Bridge\Symfony\Bundle\SwooleBundle;
+use Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle;
+use Symfony\Bundle\MonologBundle\MonologBundle;
+use Symfony\Bundle\TwigBundle\TwigBundle;
+use Twig\Extra\TwigExtraBundle\TwigExtraBundle;
+use Symplify\ConsoleColorDiff\ConsoleColorDiffBundle;
 
 return [
-    Symfony\Bundle\FrameworkBundle\FrameworkBundle::class => ['all' => true],
-    K911\Swoole\Bridge\Symfony\Bundle\SwooleBundle::class => ['all' => true],
-    Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle::class => ['all' => true],
-    Symfony\Bundle\MonologBundle\MonologBundle::class => ['all' => true],
-    Symfony\Bundle\TwigBundle\TwigBundle::class => ['all' => true],
-    Twig\Extra\TwigExtraBundle\TwigExtraBundle::class => ['all' => true],
-    Symplify\ConsoleColorDiff\ConsoleColorDiffBundle::class => ['dev' => true, 'test' => true],
+    FrameworkBundle::class => ['all' => true],
+    SwooleBundle::class => ['all' => true],
+    SensioFrameworkExtraBundle::class => ['all' => true],
+    MonologBundle::class => ['all' => true],
+    TwigBundle::class => ['all' => true],
+    TwigExtraBundle::class => ['all' => true],
+    ConsoleColorDiffBundle::class => ['dev' => true, 'test' => true],
 ];

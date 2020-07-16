@@ -1,4 +1,8 @@
 parameters:
+  import_short_classes: false
+  import_doc_blocks: false
+  auto_import_names: true
+  safe_types: true
   paths:
     - public
     - src
