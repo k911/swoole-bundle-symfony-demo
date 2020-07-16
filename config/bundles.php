@@ -1,13 +1,13 @@
 <?php
 
 declare(strict_types=1);
-use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
 use K911\Swoole\Bridge\Symfony\Bundle\SwooleBundle;
 use Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle;
+use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
 use Symfony\Bundle\MonologBundle\MonologBundle;
 use Symfony\Bundle\TwigBundle\TwigBundle;
-use Twig\Extra\TwigExtraBundle\TwigExtraBundle;
 use Symplify\ConsoleColorDiff\ConsoleColorDiffBundle;
+use Twig\Extra\TwigExtraBundle\TwigExtraBundle;
 
 return [
     FrameworkBundle::class => ['all' => true],
