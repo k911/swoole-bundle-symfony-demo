@@ -70,17 +70,30 @@
         "static-analyse-src": [
             "phpstan analyze src -l 7 -c phpstan.neon.dist --ansi --memory-limit=512M"
         ],
+        "rector-analyse": [
+            "rector process --dry-run --ansi"
+        ],
         "cs-analyse": [
             "php-cs-fixer fix -v --dry-run --diff --stop-on-violation --ansi"
         ],
         "analyse": [
             "@static-analyse-src",
-            "@cs-analyse"
+            "@cs-analyse",
+            "@rector-analyse"
         ],
         "test": [
             "@analyse"
         ],
-        "fix": "php-cs-fixer fix -v --ansi"
+        "fix-cs-fixer": [
+            "php-cs-fixer fix -v --ansi"
+        ],
+        "fix-rector": [
+            "rector process --ansi"
+        ],
+        "fix" : [
+            "@fix-cs-fixer",
+            "@fix-rector"
+        ]
     },
     "conflict": {
         "symfony/symfony": "*"
@@ -92,6 +105,7 @@
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^2.16",
-        "phpstan/phpstan": "^0.12.32"
+        "phpstan/phpstan": "^0.12.32",
+        "rector/rector": "^0.7.48"
     }
 }

@@ -2,6 +2,9 @@
     "beberlei/assert": {
         "version": "v3.2.0"
     },
+    "composer/package-versions-deprecated": {
+        "version": "1.10.99"
+    },
     "composer/semver": {
         "version": "1.5.1"
     },
@@ -20,6 +23,9 @@
             "config/routes/annotations.yaml"
         ]
     },
+    "doctrine/inflector": {
+        "version": "1.4.3"
+    },
     "doctrine/lexer": {
         "version": "v1.0.1"
     },
@@ -35,11 +41,29 @@
             ".php_cs.dist"
         ]
     },
+    "jean85/pretty-package-versions": {
+        "version": "1.5.0"
+    },
     "k911/swoole-bundle": {
         "version": "v0.5.0"
     },
     "monolog/monolog": {
         "version": "1.24.0"
+    },
+    "nette/finder": {
+        "version": "v2.5.2"
+    },
+    "nette/robot-loader": {
+        "version": "v3.2.3"
+    },
+    "nette/utils": {
+        "version": "v3.1.2"
+    },
+    "nikic/php-parser": {
+        "version": "v4.5.0"
+    },
+    "ondram/ci-detector": {
+        "version": "3.4.0"
     },
     "php": {
         "version": "7.4"
@@ -47,8 +71,14 @@
     "php-cs-fixer/diff": {
         "version": "v1.3.0"
     },
+    "phpstan/phpdoc-parser": {
+        "version": "0.4.8"
+    },
     "phpstan/phpstan": {
         "version": "0.12.32"
+    },
+    "phpstan/phpstan-phpunit": {
+        "version": "0.12.11"
     },
     "psr/cache": {
         "version": "1.0.1"
@@ -64,6 +94,12 @@
     },
     "psr/simple-cache": {
         "version": "1.0.1"
+    },
+    "rector/rector": {
+        "version": "v0.7.48"
+    },
+    "sebastian/diff": {
+        "version": "4.0.2"
     },
     "sensio/framework-extra-bundle": {
         "version": "5.2",
@@ -277,6 +313,30 @@
     },
     "symfony/yaml": {
         "version": "v4.2.7"
+    },
+    "symplify/auto-bind-parameter": {
+        "version": "v8.1.10"
+    },
+    "symplify/autowire-array-parameter": {
+        "version": "v8.1.10"
+    },
+    "symplify/console-color-diff": {
+        "version": "v8.1.10"
+    },
+    "symplify/package-builder": {
+        "version": "v8.1.10"
+    },
+    "symplify/parameter-name-guard": {
+        "version": "v8.1.10"
+    },
+    "symplify/set-config-resolver": {
+        "version": "v8.1.10"
+    },
+    "symplify/smart-file-system": {
+        "version": "v8.1.10"
+    },
+    "tracy/tracy": {
+        "version": "v2.7.5"
     },
     "twig/extra-bundle": {
         "version": "v3.0.3"

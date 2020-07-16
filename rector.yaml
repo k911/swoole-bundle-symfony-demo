@@ -1,0 +1,10 @@
+parameters:
+  paths:
+    - public
+    - src
+    - config
+  sets:
+    - code-quality
+    - performance
+    - symfony50
+    - symfony50-types
