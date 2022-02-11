@@ -309,6 +309,7 @@
                 "server",
                 "swoole"
             ],
+            "abandoned": true,
             "time": "2020-07-15T21:05:14+00:00"
         },
         {
@@ -2400,12 +2401,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Intl\\Grapheme\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Intl\\Grapheme\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -2478,12 +2479,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Intl\\Normalizer\\": ""
-                },
                 "files": [
                     "bootstrap.php"
                 ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Intl\\Normalizer\\": ""
+                },
                 "classmap": [
                     "Resources/stubs"
                 ]
@@ -2530,20 +2531,23 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.18.1",
+            "version": "v1.24.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "a6977d63bf9a0ad4c65cd352709e230876f9904a"
+                "reference": "0abb51d2f102e00a4eefcf46ba7fec406d245825"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/a6977d63bf9a0ad4c65cd352709e230876f9904a",
-                "reference": "a6977d63bf9a0ad4c65cd352709e230876f9904a",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/0abb51d2f102e00a4eefcf46ba7fec406d245825",
+                "reference": "0abb51d2f102e00a4eefcf46ba7fec406d245825",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": ">=7.1"
+            },
+            "provide": {
+                "ext-mbstring": "*"
             },
             "suggest": {
                 "ext-mbstring": "For best performance"
@@ -2551,7 +2555,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.18-dev"
+                    "dev-main": "1.23-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -2603,7 +2607,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-07-14T12:35:20+00:00"
+            "time": "2021-11-30T18:21:41+00:00"
         },
         {
             "name": "symfony/polyfill-php73",
@@ -2633,12 +2637,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Php73\\": ""
-                },
                 "files": [
                     "bootstrap.php"
                 ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php73\\": ""
+                },
                 "classmap": [
                     "Resources/stubs"
                 ]
@@ -2709,12 +2713,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Php80\\": ""
-                },
                 "files": [
                     "bootstrap.php"
                 ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php80\\": ""
+                },
                 "classmap": [
                     "Resources/stubs"
                 ]
@@ -3779,16 +3783,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v3.0.4",
+            "version": "v3.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "582bdbdc173027ebfba3c93dc750a40b8f9ebc02"
+                "reference": "972d8604a92b7054828b539f2febb0211dd5945c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/582bdbdc173027ebfba3c93dc750a40b8f9ebc02",
-                "reference": "582bdbdc173027ebfba3c93dc750a40b8f9ebc02",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/972d8604a92b7054828b539f2febb0211dd5945c",
+                "reference": "972d8604a92b7054828b539f2febb0211dd5945c",
                 "shasum": ""
             },
             "require": {
@@ -3798,12 +3802,12 @@
             },
             "require-dev": {
                 "psr/container": "^1.0",
-                "symfony/phpunit-bridge": "^4.4.9|^5.0.9"
+                "symfony/phpunit-bridge": "^4.4.9|^5.0.9|^6.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.0-dev"
+                    "dev-master": "3.3-dev"
                 }
             },
             "autoload": {
@@ -3839,18 +3843,6 @@
             ],
             "funding": [
                 {
-                    "url": "https://certification.symfony.com/",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://live.symfony.com/",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://symfony.com/cloud/",
-                    "type": "custom"
-                },
-                {
                     "url": "https://github.com/fabpot",
                     "type": "github"
                 },
@@ -3859,7 +3851,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-07-05T13:18:14+00:00"
+            "time": "2022-02-04T06:59:48+00:00"
         }
     ],
     "packages-dev": [
@@ -3979,12 +3971,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Amp\\ByteStream\\": "lib"
-                },
                 "files": [
                     "lib/functions.php"
-                ]
+                ],
+                "psr-4": {
+                    "Amp\\ByteStream\\": "lib"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -5422,93 +5414,93 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Rector\\Architecture\\": "rules/architecture/src",
-                    "Rector\\PostRector\\": "packages/post-rector/src",
-                    "Rector\\AttributeAwarePhpDoc\\": "packages/attribute-aware-php-doc/src",
-                    "Rector\\Autodiscovery\\": "rules/autodiscovery/src",
-                    "Rector\\BetterPhpDocParser\\": "packages/better-php-doc-parser/src",
-                    "Rector\\CakePHP\\": "rules/cakephp/src",
-                    "Rector\\Celebrity\\": "rules/celebrity/src",
-                    "Rector\\ChangesReporting\\": "packages/changes-reporting/src",
-                    "Rector\\CodeQuality\\": "rules/code-quality/src",
-                    "Rector\\NodeRemoval\\": "packages/node-removal/src",
-                    "Rector\\Reporting\\": "packages/reporting/src",
-                    "Rector\\CodingStyle\\": "rules/coding-style/src",
-                    "Rector\\ConsoleDiffer\\": "packages/console-differ/src",
-                    "Rector\\Core\\": "src",
-                    "Rector\\DeadCode\\": "rules/dead-code/src",
-                    "Rector\\DocumentationGenerator\\": "packages/documentation-generator/src",
-                    "Rector\\DoctrineCodeQuality\\": "rules/doctrine-code-quality/src",
-                    "Rector\\DoctrineGedmoToKnplabs\\": "rules/doctrine-gedmo-to-knplabs/src",
-                    "Rector\\Doctrine\\": "rules/doctrine/src",
-                    "Rector\\DynamicTypeAnalysis\\": "packages/dynamic-type-analysis/src",
-                    "Rector\\DoctrineAnnotationGenerated\\": "packages/doctrine-annotation-generated/src",
-                    "Rector\\FileSystemRector\\": "packages/file-system-rector/src",
-                    "Rector\\FrameworkMigration\\": "rules/framework-migration/src",
-                    "Rector\\FamilyTree\\": "packages/family-tree/src",
-                    "Rector\\Guzzle\\": "rules/guzzle/src",
                     "Rector\\JMS\\": "rules/jms/src",
-                    "Rector\\Laravel\\": "rules/laravel/src",
-                    "Rector\\Legacy\\": "rules/legacy/src",
-                    "Rector\\MagicDisclosure\\": "rules/magic-disclosure/src",
-                    "Rector\\MysqlToMysqli\\": "rules/mysql-to-mysqli/src",
-                    "Rector\\NetteTesterToPHPUnit\\": "rules/nette-tester-to-phpunit/src",
-                    "Rector\\NetteToSymfony\\": "rules/nette-to-symfony/src",
-                    "Rector\\Nette\\": "rules/nette/src",
-                    "Rector\\NodeCollector\\": "packages/node-collector/src",
-                    "Rector\\Decouple\\": "rules/decouple/src",
-                    "Rector\\NodeNameResolver\\": "packages/node-name-resolver/src",
-                    "Rector\\NodeTypeResolver\\": "packages/node-type-resolver/src",
-                    "Rector\\PhpAttribute\\": "packages/php-attribute/src",
-                    "Rector\\PHPStanStaticTypeMapper\\": "packages/phpstan-static-type-mapper/src",
-                    "Rector\\PHPStan\\": "rules/phpstan/src",
-                    "Rector\\PHPUnitSymfony\\": "rules/phpunit-symfony/src",
-                    "Rector\\Caching\\": "packages/caching/src",
-                    "Rector\\PHPUnit\\": "rules/phpunit/src",
+                    "Rector\\Php\\": "rules/php/src",
+                    "Rector\\Core\\": "src",
                     "Rector\\PSR4\\": "rules/psr4/src",
-                    "Rector\\Phalcon\\": "rules/phalcon/src",
+                    "Rector\\Twig\\": "rules/twig/src",
+                    "Rector\\Nette\\": "rules/nette/src",
+                    "Rector\\Order\\": "rules/order/src",
                     "Rector\\Php52\\": "rules/php52/src",
                     "Rector\\Php53\\": "rules/php53/src",
                     "Rector\\Php54\\": "rules/php54/src",
                     "Rector\\Php55\\": "rules/php55/src",
                     "Rector\\Php56\\": "rules/php56/src",
                     "Rector\\Php70\\": "rules/php70/src",
-                    "Rector\\Php\\": "rules/php/src",
                     "Rector\\Php71\\": "rules/php71/src",
                     "Rector\\Php72\\": "rules/php72/src",
                     "Rector\\Php73\\": "rules/php73/src",
                     "Rector\\Php74\\": "rules/php74/src",
                     "Rector\\Php80\\": "rules/php80/src",
-                    "Rector\\PHPOffice\\": "rules/php-office/src",
-                    "Rector\\PhpDeglobalize\\": "rules/php-deglobalize/src",
-                    "Rector\\PhpSpecToPHPUnit\\": "rules/php-spec-to-phpunit/src",
-                    "Rector\\Polyfill\\": "packages/polyfill/src",
-                    "Rector\\Privatization\\": "rules/privatization/src",
-                    "Rector\\RectorGenerator\\": "packages/rector-generator/src",
-                    "Rector\\RemovingStatic\\": "rules/removing-static/src",
-                    "Rector\\Renaming\\": "rules/renaming/src",
-                    "Rector\\Restoration\\": "rules/restoration/src",
                     "Rector\\SOLID\\": "rules/solid/src",
-                    "Rector\\NodeNestingScope\\": "packages/node-nesting-scope/src",
-                    "Rector\\Sensio\\": "rules/sensio/src",
-                    "Rector\\StaticTypeMapper\\": "packages/static-type-mapper/src",
-                    "Rector\\StrictCodeQuality\\": "rules/strict-code-quality/src",
-                    "Rector\\SymfonyCodeQuality\\": "rules/symfony-code-quality/src",
-                    "Rector\\SymfonyPHPUnit\\": "rules/symfony-phpunit/src",
-                    "Rector\\Symfony\\": "rules/symfony/src",
-                    "Rector\\Twig\\": "rules/twig/src",
-                    "Rector\\TypeDeclaration\\": "rules/type-declaration/src",
-                    "Rector\\VendorLocker\\": "packages/vendor-locker/src",
-                    "Rector\\Performance\\": "rules/performance/src",
+                    "Rector\\Guzzle\\": "rules/guzzle/src",
+                    "Rector\\Legacy\\": "rules/legacy/src",
                     "Rector\\Naming\\": "rules/naming/src",
-                    "Rector\\Order\\": "rules/order/src",
+                    "Rector\\Sensio\\": "rules/sensio/src",
+                    "Rector\\Caching\\": "packages/caching/src",
+                    "Rector\\CakePHP\\": "rules/cakephp/src",
+                    "Rector\\Laravel\\": "rules/laravel/src",
+                    "Rector\\PHPStan\\": "rules/phpstan/src",
+                    "Rector\\PHPUnit\\": "rules/phpunit/src",
+                    "Rector\\Phalcon\\": "rules/phalcon/src",
+                    "Rector\\Symfony\\": "rules/symfony/src",
+                    "Rector\\DeadCode\\": "rules/dead-code/src",
+                    "Rector\\Decouple\\": "rules/decouple/src",
+                    "Rector\\Doctrine\\": "rules/doctrine/src",
+                    "Rector\\Polyfill\\": "packages/polyfill/src",
+                    "Rector\\Renaming\\": "rules/renaming/src",
+                    "Rector\\Celebrity\\": "rules/celebrity/src",
+                    "Rector\\Decomplex\\": "rules/decomplex/src",
+                    "Rector\\Downgrade\\": "rules/downgrade/src",
+                    "Rector\\PHPOffice\\": "rules/php-office/src",
+                    "Rector\\Reporting\\": "packages/reporting/src",
+                    "Rector\\FamilyTree\\": "packages/family-tree/src",
+                    "Rector\\NetteKdyby\\": "rules/nette-kdyby/src",
+                    "Rector\\PostRector\\": "packages/post-rector/src",
+                    "Rector\\CodeQuality\\": "rules/code-quality/src",
+                    "Rector\\CodingStyle\\": "rules/coding-style/src",
+                    "Rector\\NodeRemoval\\": "packages/node-removal/src",
+                    "Rector\\Performance\\": "rules/performance/src",
+                    "Rector\\Restoration\\": "rules/restoration/src",
+                    "Rector\\Architecture\\": "rules/architecture/src",
+                    "Rector\\PhpAttribute\\": "packages/php-attribute/src",
+                    "Rector\\VendorLocker\\": "packages/vendor-locker/src",
+                    "Rector\\Autodiscovery\\": "rules/autodiscovery/src",
+                    "Rector\\ConsoleDiffer\\": "packages/console-differ/src",
+                    "Rector\\MysqlToMysqli\\": "rules/mysql-to-mysqli/src",
+                    "Rector\\NodeCollector\\": "packages/node-collector/src",
+                    "Rector\\Privatization\\": "rules/privatization/src",
+                    "Rector\\NetteToSymfony\\": "rules/nette-to-symfony/src",
+                    "Rector\\PHPUnitSymfony\\": "rules/phpunit-symfony/src",
+                    "Rector\\PhpDeglobalize\\": "rules/php-deglobalize/src",
+                    "Rector\\RemovingStatic\\": "rules/removing-static/src",
+                    "Rector\\SymfonyPHPUnit\\": "rules/symfony-phpunit/src",
+                    "Rector\\MagicDisclosure\\": "rules/magic-disclosure/src",
+                    "Rector\\RectorGenerator\\": "packages/rector-generator/src",
+                    "Rector\\TypeDeclaration\\": "rules/type-declaration/src",
+                    "Rector\\ChangesReporting\\": "packages/changes-reporting/src",
+                    "Rector\\FileSystemRector\\": "packages/file-system-rector/src",
+                    "Rector\\NetteCodeQuality\\": "rules/nette-code-quality/src",
+                    "Rector\\NodeNameResolver\\": "packages/node-name-resolver/src",
+                    "Rector\\NodeNestingScope\\": "packages/node-nesting-scope/src",
+                    "Rector\\NodeTypeResolver\\": "packages/node-type-resolver/src",
+                    "Rector\\PhpSpecToPHPUnit\\": "rules/php-spec-to-phpunit/src",
+                    "Rector\\StaticTypeMapper\\": "packages/static-type-mapper/src",
                     "Rector\\MockeryToProphecy\\": "rules/mockery-to-prophecy/src",
                     "Rector\\MockistaToMockery\\": "rules/mockista-to-mockery/src",
-                    "Rector\\NetteKdyby\\": "rules/nette-kdyby/src",
+                    "Rector\\StrictCodeQuality\\": "rules/strict-code-quality/src",
+                    "Rector\\BetterPhpDocParser\\": "packages/better-php-doc-parser/src",
+                    "Rector\\FrameworkMigration\\": "rules/framework-migration/src",
+                    "Rector\\SymfonyCodeQuality\\": "rules/symfony-code-quality/src",
+                    "Rector\\DoctrineCodeQuality\\": "rules/doctrine-code-quality/src",
+                    "Rector\\DynamicTypeAnalysis\\": "packages/dynamic-type-analysis/src",
+                    "Rector\\AttributeAwarePhpDoc\\": "packages/attribute-aware-php-doc/src",
+                    "Rector\\NetteTesterToPHPUnit\\": "rules/nette-tester-to-phpunit/src",
                     "Rector\\NetteUtilsCodeQuality\\": "rules/nette-utils-code-quality/src",
-                    "Rector\\NetteCodeQuality\\": "rules/nette-code-quality/src",
-                    "Rector\\Decomplex\\": "rules/decomplex/src",
-                    "Rector\\Downgrade\\": "rules/downgrade/src"
+                    "Rector\\DoctrineGedmoToKnplabs\\": "rules/doctrine-gedmo-to-knplabs/src",
+                    "Rector\\DocumentationGenerator\\": "packages/documentation-generator/src",
+                    "Rector\\PHPStanStaticTypeMapper\\": "packages/phpstan-static-type-mapper/src",
+                    "Rector\\DoctrineAnnotationGenerated\\": "packages/doctrine-annotation-generated/src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -5703,12 +5695,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Php72\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php72\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -5858,6 +5850,7 @@
                     "type": "github"
                 }
             ],
+            "abandoned": "symplify/package-builder",
             "time": "2020-07-16T16:29:39+00:00"
         },
         {
@@ -6108,6 +6101,7 @@
                     "type": "github"
                 }
             ],
+            "abandoned": true,
             "time": "2020-07-16T16:29:39+00:00"
         },
         {
@@ -6199,11 +6193,11 @@
                 }
             },
             "autoload": {
-                "classmap": [
-                    "src"
-                ],
                 "files": [
                     "src/Tracy/shortcuts.php"
+                ],
+                "classmap": [
+                    "src"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -6303,13 +6297,13 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Psalm\\": "src/Psalm/"
-                },
                 "files": [
                     "src/functions.php",
                     "src/spl_object_id.php"
-                ]
+                ],
+                "psr-4": {
+                    "Psalm\\": "src/Psalm/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -6333,12 +6327,12 @@
             "version": "1.9.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/webmozart/assert.git",
+                "url": "https://github.com/webmozarts/assert.git",
                 "reference": "bafc69caeb4d49c39fd0779086c03a3738cbb389"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/bafc69caeb4d49c39fd0779086c03a3738cbb389",
+                "url": "https://api.github.com/repos/webmozarts/assert/zipball/bafc69caeb4d49c39fd0779086c03a3738cbb389",
                 "reference": "bafc69caeb4d49c39fd0779086c03a3738cbb389",
                 "shasum": ""
             },
@@ -6382,12 +6376,12 @@
             "version": "4.1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/webmozart/glob.git",
+                "url": "https://github.com/webmozarts/glob.git",
                 "reference": "3cbf63d4973cf9d780b93d2da8eec7e4a9e63bbe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/glob/zipball/3cbf63d4973cf9d780b93d2da8eec7e4a9e63bbe",
+                "url": "https://api.github.com/repos/webmozarts/glob/zipball/3cbf63d4973cf9d780b93d2da8eec7e4a9e63bbe",
                 "reference": "3cbf63d4973cf9d780b93d2da8eec7e4a9e63bbe",
                 "shasum": ""
             },
@@ -6468,6 +6462,7 @@
                 }
             ],
             "description": "A robust cross-platform utility for normalizing, comparing and modifying file paths.",
+            "abandoned": "symfony/filesystem",
             "time": "2015-12-17T08:42:14+00:00"
         }
     ],
